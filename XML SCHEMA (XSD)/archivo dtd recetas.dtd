@@ -1,0 +1,9 @@
+<!ELEMENT cookbook (recipe+(aqui se pone el asterisco, la interrogación o el más))>
+<!ELEMENT recipe (name,ingredients(aqui se pone el asterisco, la interrogación o el más),process)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT ingredients (ingredient+)>
+<!ELEMENT ingredient (name,quantify?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT quantify (#PCDATA)>
+<!ELEMENT process (step+)>
+<!ATTLIST step orden CDATA #REQUIRED>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="route">
+  <xsd:complexType>
+      <xsd:sequence>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="schudele" type="xs:string"/>
+        <xs:element name="stop" type="xs:string"/>
+      </xsd:sequence>
+  </xsd:complexType>
+<xsd:element name="schudele">
+  <xsd:complexType>
+    <xsd:sequence>
+      <xsd:element ref="first" minOccurs="1" maxOccurs="1"/>
+      <xsd:element ref="last" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
