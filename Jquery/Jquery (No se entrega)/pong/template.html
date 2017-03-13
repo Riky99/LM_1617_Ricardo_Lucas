@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Template</title>
+		<!-- Loading jQUery Script -->
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="estilos.css">
+	</head>
+	<body>
+		
+		<div id="container">
+			<div id="caja1"></div>
+			<div id="caja2"></div>
+			<div id="menu">
+				<div id="Restaurar">Recargar</div>
+				<div id="Opcion 1">Opcion 1</div>
+				<div id="Opcion 2">Opcion 2</div>				
+			</div>
+		</div>
+		<script>
+			//Function executed when the HTML document is Ready (full loaded)
+		$(function() {
+			$("body").keypress(function(event) {
+				var tecla = event .which;
+				console.log (tecla);				
+
+				if (tecla == 119) {
+	  			$("#caja1").animate({
+	  				top : "-=10px"
+	  				},200);	  			
+	  		}
+
+	  		if (tecla == 115) {
+	  			$("#caja1").animate({
+	  				top : "+=10px"
+	  				},200);	  			
+	  		}
+
+	  		if (tecla == 101) {
+	  			$("#caja2").animate({
+	  				top : "-=10px"
+	  				},200);	  			
+	  		}
+
+
+	  		if (tecla == 100) {
+	  			$("#caja2").animate({
+	  				top : "+=10px"
+	  				},200);	  			
+	  		}
+				});
+		});
+		</script>
+	</body>
+</html>
